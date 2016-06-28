@@ -28,12 +28,12 @@
           p:sessionFactory-ref="sessionFactory"/>
 
     <tx:annotation-driven/>
-    <context:component-scan base-package=""/>
+    <context:component-scan base-package="ru.spring.hibernate"/>
 
     <bean id="sessionFactory"
           class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
           p:dataSource-ref="dataSource"
-          p:packagesToScan=""
+          p:packagesToScan="ru.spring.hibernate"
           p:hibernateProperties-ref="hibernateProperties"/>
 
     <util:properties id="hibernateProperties">
